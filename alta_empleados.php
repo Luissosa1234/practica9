@@ -124,19 +124,19 @@ body { background-color:#999;}
 		 //Caja de Texto ****************************************************************
          if(valoridcine == null || valoridcine.length == 0 || /^\s+$/.test(valoridcine)) 
 		 {
-			 alert("Debes escribir el número de empleado");
+			 alert("Debes escribir el número de Cine");
 			 document.getElementById("txt_id_cine").focus();
              return false;
 		 } else if (valorcine == null || valorcine.length == 0 || /^\s+$/.test(valorcine)){
-			 alert("Debes escribir el nombre del empleado");
+			 alert("Debes escribir el nombre del Cine");
 			 document.getElementById("txt_nombre_cine").focus();
              return false;	 
 	     } else if (valordomicilio == null || valordomicilio.length == 0 || /^\s+$/.test(valordomicilio)){
-			 alert("Debes escribir el salario del empleado");
+			 alert("Debes escribir el Domicilio");
 			 document.getElementById("txt_domicilio_cine").focus();
              return false;
 		 } else if (valortelefono == null || valortelefono.length == 0 || /^\s+$/.test(valortelefono)){
-			 alert("Debes escribir la categoría del empleado");
+			 alert("Debes escribir un Telefono");
 			 document.getElementById("txt_telefono_cine").focus();
              return false;
 		} else if (valorcorreo == null || valorcorreo.length == 0 || /^\s+$/.test(valorcorreo)){
@@ -145,7 +145,7 @@ body { background-color:#999;}
              return false;	 	 
 		 //Cajas de Selección (Combo Box) ****************************************************************
          } else if (salas == null || salas == 0){
-			 alert("Debes elegir un salas");
+			 alert("Debes elegir el numero de Salas");
 			 document.getElementById("combo_sala").focus();
              return false;
 		 } else if (municipio == null || municipio == 0){
@@ -212,11 +212,11 @@ body { background-color:#999;}
                         Sexo:<!-- Caja de Selección o ComboBox -->
                         <select name="combo_sala" id="combo_sala">
                           <option value="0">-- Numero de salas --</option>
-                          <option value="10">10</option>
-                          <option value="15">15</option>
-						  <option value="20">20</option>
-						  <option value="25">25</option>
-						  <option value="30">30</option>
+                          <option value=10>10</option>
+                          <option value=15>15</option>
+						  <option value=20>20</option>
+						  <option value=25>25</option>
+						  <option value=30>30</option>
 						</select>
                     <br />
                     <br />

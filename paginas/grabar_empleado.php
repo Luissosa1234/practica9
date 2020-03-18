@@ -11,13 +11,17 @@
 	$telefono = trim($_POST["txt_telefono_cine"]);
 	$correo = $_POST["txt_correo_cine"];
 
+
 	/* estos son los combos */
-    $sala = $_POST["combo_sala"];
+	$sala = $_POST["combo_sala"];
+	$sala = (int)$sala;
 	$municipio = $_POST["combo_municipio"];
 	
+
+	echo "este es el dato municipio ---->".$sala;
     // Escribimos la consulta para INSERTAR LOS DATOS EN LA TABLA de empleados usando PDO *************
     $sqlINSERT1 = "INSERT INTO cines (id_cine, id_municipio, nombre_cine, no_salas, domicilio_cine, telefono_cine, correo_cine) ";
-	$sqlINSERT2 = $sqlINSERT1 . "VALUES ($numero, '$municipio','$nombre','$sala', $domicilio, '$telefono','$correo'  )";
+	$sqlINSERT2 = $sqlINSERT1 . "VALUES ('$numero', '$municipio','$nombre','$sala', '$domicilio', '$telefono','$correo'  )";
     // Ejecutamos la sentencia INSERT de SQL a partir de la conexión usando PDO ***********************
     $conn->exec($sqlINSERT2);
 ?>
@@ -148,7 +152,7 @@ body { background-color:#999;}
                          <b>Correo:</b> <?php echo ($correo); ?>
                     <br />
                     <br />
-                    <a href="../alta_empleados.php">REGISTRAR OTRO EMPLEADO</a>
+                    <a href="../alta_empleados.php">REGISTRAR OTRO CINE</a>
                 </div>
         </fieldset> 
      </div>
