@@ -23,8 +23,12 @@
     $sqlINSERT1 = "INSERT INTO cines (id_cine, id_municipio, nombre_cine, no_salas, domicilio_cine, telefono_cine, correo_cine) ";
 	$sqlINSERT2 = $sqlINSERT1 . "VALUES ('$numero', '$municipio','$nombre','$sala', '$domicilio', '$telefono','$correo'  )";
     // Ejecutamos la sentencia INSERT de SQL a partir de la conexión usando PDO ***********************
+    
+    
     $conn->exec($sqlINSERT2);
+    
 ?>
+
 <!doctype html>
 <html>
 <head>
@@ -48,7 +52,9 @@
      <div id="texto1"><br>
       <p><?php echo $result;?></p>
  
-        <fieldset style="width: 90%;"    >
+		<fieldset style="margin:auto">
+		
+
             <legend>Cine Registrado Correctamente</legend>
                 <div>
                     <br />

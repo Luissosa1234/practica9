@@ -32,28 +32,50 @@
         
             </header>
 
-			<h3 class="centrar">Por fabor llene todos los campos con *</h3>
-    <form action="grabar_informacionSESION5.php" method="post" id="form_vendiendo_motos">
-        <div class="principal colorear">
+			<h3 class="centrar">Agregar un nuevo Cine llenar todos los campos</h3>
+			<p><?php echo $result;?></p>
+		
+            <form action="paginas/grabar_cine.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
+			
+			
+			
+			
+            <div class="principal colorear">
             <div class="ncampos">
-      
-
-            </div>
-
-<div id="wrapper">
-
-
- 
-   <div id="caja4">
-     <div id="texto1"><br>
-      <p><?php echo $result;?></p>
- 
-        <fieldset style="width: 90%; font-weight: bold;"    >
-            <legend>REGISTRAR UN NUEVO CINE</legend>
-          <form action="paginas/grabar_cine.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
-                <div>
-                    <br />
+			<fieldset>
+			<legend>REGISTRAR UN NUEVO CINE</legend>
+			<br />
                       <label for="municipio">Municipio:</label>
+            
+                    <br />
+                    <br />
+                         Número de Cine: 
+                   <br />
+                    <br />
+                         Nombre de Cine: 
+                    <br />
+                    <br />
+                         Domicilio de Cine: 
+                    <br />
+                    <br />
+                         Telefono de Cine: 
+                     <br />
+                    <br />
+                         Correo de Cine: 
+                  <br />
+					<br />
+                        Numero de Salas:<!-- Caja de Selección o ComboBox -->
+                      
+                    <br />
+                  
+					</fieldset> 
+			</div>
+			<div class="ecampos" >
+			<br />
+			<br />
+			
+			
+			
                       <select name="combo_municipio" id="combo_municipio">
                       <option value="0">-- Selecciona un Municipio --</option>
                         <?php 
@@ -65,27 +87,27 @@
                       </select>
                     <br />
                     <br />
-                         Número de Cine: 
+                    
                          <input type="text" name="txt_id_cine" id="txt_id_cine" size="10">
                     <br />
                     <br />
-                         Nombre de Cine: 
+                    
                          <input type="text" name="txt_nombre_cine" id="txt_nombre_cine" size="40">
                     <br />
                     <br />
-                         Domicilio de Cine: 
+                      
                          <input type="text" name="txt_domicilio_cine" id="txt_domicilio_cine" size="15">
                     <br />
                     <br />
-                         Telefono de Cine: 
+                    
                          <input type="text" name="txt_telefono_cine" id="txt_telefono_cine" size="40">
                     <br />
                     <br />
-                         Correo de Cine: 
+                       
                          <input type="text" name="txt_correo_cine" id="txt_correo_cine" size="40">
                     <br />
 					<br />
-                        Numero de Salas:<!-- Caja de Selección o ComboBox -->
+                       <!-- Caja de Selección o ComboBox -->
                         <select name="combo_sala" id="combo_sala">
                           <option value="0">-- Numero de salas --</option>
                           <option value=10>10</option>
@@ -95,15 +117,15 @@
 						  <option value=30>30</option>
 						</select>
                     <br />
+					<br />
+                   
+            </div>
+
+			</form>
+			<input type="submit" name="AddEmpleado" id="AddEmpleado" value="  Registrar este cine" />
                     <br />
-                      <input type="submit" name="AddEmpleado" id="AddEmpleado" value="  Registrar este cine" />
-                    <br />
-                </div>
-            </form>
-        </fieldset> 
-     </div>
-  </div>
-</div>
+					
+		</div>
      <?php
 			//Cerramos la oonexion a la base de datos **********************************************
 			$conn = null;
