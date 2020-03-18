@@ -1,20 +1,23 @@
 <?php
     // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
-    require_once "conexion_mysql.php";
+    require_once "conn_mysql_alan.php";
     $result = "";
 	
 	//Recuperamos los valores de las cajas de texto y de los demás objetos de formulario **************
-    $numero = $_POST["txtnumero"];
+    $numero = $_POST["txt_id_cine"];
 	$numero = (int)$numero;
-	$nombre = strtoupper(trim($_POST["txtnombre"]));
-	$salario = $_POST["txtsalario"];
-	$categoria = trim($_POST["txtcategoria"]);
-    $sexo = $_POST["combo_sexo"];
-	$departamento = $_POST["combo_departamento"];
+	$nombre = strtoupper(trim($_POST["txt_nombre_cine"]));
+	$domicilio = $_POST["txt_domicilio_cine"];
+	$telefono = trim($_POST["txt_telefono_cine"]);
+	$correo = $_POST["txt_correo_cine"];
+
+	/* estos son los combos */
+    $sala = $_POST["combo_sala"];
+	$municipio = $_POST["combo_municipio"];
 	
     // Escribimos la consulta para INSERTAR LOS DATOS EN LA TABLA de empleados usando PDO *************
-    $sqlINSERT1 = "INSERT INTO empleados(numero, nombre, salario, categoria, sexo, departamento) ";
-	$sqlINSERT2 = $sqlINSERT1 . "VALUES ($numero, '$nombre', $salario, '$categoria', '$sexo', '$departamento')";
+    $sqlINSERT1 = "INSERT INTO cines (id_cine, id_municipio, nombre_cine, no_salas, domicilio_cine, telefono_cine, correo_cine) ";
+	$sqlINSERT2 = $sqlINSERT1 . "VALUES ($numero, '$municipio','$nombre','$sala', $domicilio, '$telefono','$correo'  )";
     // Ejecutamos la sentencia INSERT de SQL a partir de la conexión usando PDO ***********************
     $conn->exec($sqlINSERT2);
 ?>
@@ -121,28 +124,31 @@ body { background-color:#999;}
       <p><?php echo $result;?></p>
  
         <fieldset style="width: 90%;"    >
-            <legend>EMPLEADO REGISTRADO SATISFACTORIAMENTE</legend>
+            <legend>Cine Registrado Correctamente</legend>
                 <div>
                     <br />
-                         <b>Departamento:</b> <?php echo ($departamento); ?>
+                         <b>Número de Cine:</b> <?php echo ($numero); ?>
                     <br />
                     <br />
-                         <b>Número de empleado:</b> <?php echo ($numero); ?>
+                         <b>Municipio:</b> <?php echo ($municipio); ?>
                     <br />
                     <br />
-                         <b>Nombre de empleado:</b> <?php echo ($nombre); ?>
+                         <b>Nombre de Cine:</b> <?php echo ($nombre); ?>
                     <br />
                     <br />
-                         <b>Salario de empleado_:</b> <?php echo ($salario); ?>
+                        <b>Numero de Salas:</b> <?php echo ($sala); ?>
                     <br />
                     <br />
-                         <b>Categoría de empleado:</b> <?php echo ($categoria); ?>
+                         <b>Domicilio:</b> <?php echo ($domicilio); ?>
                     <br />
                     <br />
-                        <b>Sexo:</b> <?php echo ($sexo); ?>
+                         <b>Telefono:</b> <?php echo ($telefono); ?>
+                    <br />
+					<br />
+                         <b>Correo:</b> <?php echo ($correo); ?>
                     <br />
                     <br />
-                    <a href="alta_empleados.php">REGISTRAR OTRO EMPLEADO</a>
+                    <a href="../alta_empleados.php">REGISTRAR OTRO EMPLEADO</a>
                 </div>
         </fieldset> 
      </div>
