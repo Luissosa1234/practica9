@@ -26,6 +26,7 @@
 <head>
 <meta charset="utf-8">
 <title>Practica Sesion 9</title>
+
 <link rel="stylesheet" href="css/style.css">
 <!-- enlace de el archivo javascript con las funciones de validacion -->
 <script src="js/funciones.js" language="javascript"></script>
