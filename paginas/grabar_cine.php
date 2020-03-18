@@ -79,7 +79,7 @@
                          <b>Correo:</b> <?php echo ($correo); ?>
                     <br />
                     <br />
-                    <a href="../alta_cine.php">REGISTRAR OTRO CINE</a>
+                    <a href="../alta_cine_alan.php">REGISTRAR OTRO CINE</a>
                 </div>
         </fieldset> 
      </div>

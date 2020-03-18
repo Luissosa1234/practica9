@@ -13,12 +13,19 @@
     if (empty($rows)) {
         $result = "No se encontraron resultados !!";
     }
+
+      // Escribimos la consulta para recuperar los departamentos de la tabla departamentos **************
+      
+  
+    
+
+     
 ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Regitro de empleados desde PHP hacia MySQL</title>
+<title>Practica Sesion 9</title>
 <link rel="stylesheet" href="css/style.css">
 <!-- enlace de el archivo javascript con las funciones de validacion -->
 <script src="js/funciones.js" language="javascript"></script>
@@ -34,7 +41,8 @@
 
 			<h3 class="centrar">Agregar un nuevo Cine llenar todos los campos</h3>
 			<p><?php echo $result;?></p>
-		
+          
+             
             <form action="paginas/grabar_cine.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 			
 			
