@@ -35,6 +35,12 @@
 
 <body>
 
+<header class="logo">
+         <img src="../img/logo.png" alt="cinepolis">
+        
+            </header>
+
+
 <div id="wrapper">
 
    

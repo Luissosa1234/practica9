@@ -27,6 +27,19 @@
 
 <body>
 
+<header class="logo">
+         <img src="img/logo.png" alt="cinepolis">
+        
+            </header>
+
+			<h3 class="centrar">Por fabor llene todos los campos con *</h3>
+    <form action="grabar_informacionSESION5.php" method="post" id="form_vendiendo_motos">
+        <div class="principal colorear">
+            <div class="ncampos">
+      
+
+            </div>
+
 <div id="wrapper">
 
 
